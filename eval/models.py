@@ -28,8 +28,8 @@ class VLLMModel(Model):
         base_url = self.url
         # wait for server to be ready
         assert base_url is not None
-        match = re.match(r"^http.*:\d+$", base_url)
-        assert match is not None, base_url
+        # match = re.match(r"^http.*:\d+$", base_url)
+        # assert match is not None, base_url
 
         health_endpoint = f"{base_url}/health"
         timeout = 120
